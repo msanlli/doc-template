@@ -1,0 +1,31 @@
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{subcaption}
+
+% Page margins
+\usepackage[top=3cm,bottom=4cm,right=3.5cm,left=3.5cm]{geometry}
+
+% Headers and footers for title
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0pt}
+    \fancyfoot[C]{
+    \includegraphics[height=3cm]{IMG/msl.png}
+    }
+}
+
+\fancypagestyle{fancy}{
+    \fancyhf{}
+    \fancyhead[C]{\leftmark}
+}
+
+% Note box
+\usepackage{amssymb}
+\usepackage{tcolorbox}
+\newtcolorbox{notebox}{colback=black!5!white, colframe=black}
+\newcommand{\note}[1]{
+\begin{notebox}
+    $\blacktriangleright$ \textit{#1}
+\end{notebox}}
